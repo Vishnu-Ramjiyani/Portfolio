@@ -1,19 +1,22 @@
-import React from 'react';
+import React from "react";
 
-const Experience = () => (
-  <section className="experience">
-    <h2>Experience</h2>
-    <div>
-      <h3>CodSoft - Web Development Intern</h3>
-      <p>May 2024 - June 2024</p>
-      <p>Developed landing pages using HTML, CSS, and JavaScript...</p>
-    </div>
-    <div>
-      <h3>OCTANET - Web Development Intern</h3>
-      <p>June 2024 - July 2024</p>
-      <p>Created responsive landing pages and managed content...</p>
-    </div>
-  </section>
-);
+const experiences = [
+  { company: "CodSoft", role: "Web Development Intern", duration: "May - June 2024" },
+  { company: "OCTANET", role: "Web Development Intern", duration: "June - July 2024" },
+];
+
+const Experience = () => {
+  return (
+    <section id="experience">
+      <h2>Experience</h2>
+      {experiences.map((exp, index) => (
+        <div key={index}>
+          <h3>{exp.company}</h3>
+          <p>{exp.role} - {exp.duration}</p>
+        </div>
+      ))}
+    </section>
+  );
+};
 
 export default Experience;

@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const Skills = () => (
-  <section className="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>React.js</li>
-      <li>JavaScript (ES6+)</li>
-      <li>HTML5, CSS3, TailwindCSS</li>
-      <li>Python</li>
-      <li>MongoDB, Firebase</li>
-    </ul>
-  </section>
-);
+const skills = ["HTML", "CSS", "JavaScript", "React", "Next.js", "Python", "PHP"];
+
+const Skills = () => {
+  return (
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        {skills.map((skill) => (
+          <li key={skill}>{skill}</li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
 export default Skills;

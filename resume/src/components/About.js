@@ -1,11 +1,12 @@
-import React from 'react';
-import './About.css';
+import React from "react";
 
-const About = () => (
-  <section className="about">
-    <h2>About Me</h2>
-    <p>A highly motivated and detail-oriented Front-End Developer with hands-on experience in building...</p>
-  </section>
-);
+const About = () => {
+  return (
+    <section id="about">
+      <h2>About Me</h2>
+      <p>A highly motivated Front-End Developer skilled in building dynamic, responsive web applications.</p>
+    </section>
+  );
+};
 
 export default About;
